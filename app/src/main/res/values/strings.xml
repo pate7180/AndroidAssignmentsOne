@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">AndroidAssignmentsOne</string>
+    <string name="app_name">Android Assignments</string>
     <string name="welcome_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
+    <string name="login_label">Login</string>
+    <string name="login_input_hint">Login name</string>
+    <string name="password_label">Password</string>
+    <string name="radio_button_label">RadioButton</string>
+    <string name="checkbox_label">CheckBox</string>
+    <string name="switch_text">What does this do?</string>
+    <string name="password_input_hint">Password</string>
 </resources>
