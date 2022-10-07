@@ -9,4 +9,18 @@
     <string name="checkbox_label">CheckBox</string>
     <string name="switch_text">What does this do?</string>
     <string name="password_input_hint">Password</string>
+    <string name="login_name_required">Login name is required</string>
+    <string name="login_name_invalid">Enter valid email</string>
+    <string name="password_required">Password is required</string>
+    <string name="login_button_text">Login</string>
+    <string name="switch_on">Switch is On</string>
+    <string name="switch_off">Switch is Off</string>
+    <string name="camera_permission_granted">Camera permission granted</string>
+    <string name="camera_permission_denied">Camera permission denied</string>
+    <string name="print_function_text">List Items Activity page</string>
+    <string name="dailog_alert">Alert</string>
+    <string name="dailog_message">You want to finish the activity?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="response_text">ListItemsActivity passed: My information to share</string>
 </resources>

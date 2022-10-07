@@ -3,11 +3,25 @@
     <string name="app_name">एंड्रॉइड असाइनमेंट</string>
     <string name="welcome_message">नमस्ते दुनिया!</string>
     <string name="ButtonText">मैं एक बटन हूँ</string>
-    <string name="login_label">लॉग इन करें</string>
+    <string name="login_label">लॉग इन</string>
     <string name="login_input_hint">लॉगिन नाम</string>
     <string name="password_label">पासवर्ड</string>
     <string name="radio_button_label">रेडियो बटन</string>
     <string name="checkbox_label">"चेक बॉक्स "</string>
     <string name="switch_text">"यह क्या करता है? "</string>
     <string name="password_input_hint">पासवर्ड</string>
+    <string name="login_name_required">लॉगिन नाम आवश्यक है</string>
+    <string name="login_name_invalid">मान्य ईमेल दर्ज करें</string>
+    <string name="password_required">"पासवर्ड की आवश्यकता है "</string>
+    <string name="login_button_text">"लॉग इन करें "</string>
+    <string name="switch_on">"स्विच चालू है "</string>
+    <string name="switch_off">"स्विच ऑफ है "</string>
+    <string name="camera_permission_granted">"कैमरा अनुमति दी गई "</string>
+    <string name="camera_permission_denied">"कैमरा अनुमति अस्वीकृत "</string>
+    <string name="print_function_text">"सूची आइटम गतिविधि पृष्ठ "</string>
+    <string name="dailog_alert">चेतावनी</string>
+    <string name="dailog_message">आप गतिविधि समाप्त करना चाहते हैं?</string>
+    <string name="yes">"हाँ "</string>
+    <string name="no">नहीं</string>
+    <string name="response_text">सूची आइटम गतिविधि पारित: साझा करने के लिए मेरी जानकारी</string>
 </resources>
