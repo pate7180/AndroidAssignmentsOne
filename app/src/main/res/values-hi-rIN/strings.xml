@@ -24,4 +24,6 @@
     <string name="yes">"हाँ "</string>
     <string name="no">नहीं</string>
     <string name="response_text">सूची आइटम गतिविधि पारित: साझा करने के लिए मेरी जानकारी</string>
+    <string name="start_chat_button_text">"बातचीत शुरू कीजिए "</string>
+    <string name="activity_chat_window_send_button">भेजना</string>
 </resources>

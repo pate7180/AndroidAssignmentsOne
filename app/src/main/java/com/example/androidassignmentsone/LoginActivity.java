@@ -48,14 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-//        super.onActivityResult(requestCode,resultCode,data);
-//        Log.i(ACTIVITY_NAME, String.valueOf(requestCode));
-//        Log.i(ACTIVITY_NAME,  String.valueOf(resultCode));
-//        Log.i(ACTIVITY_NAME,  String.valueOf(data));
-//
-//    }
 
     @Override
     protected void onResume(){

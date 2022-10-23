@@ -23,4 +23,6 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="response_text">ListItemsActivity passed: My information to share</string>
+    <string name="start_chat_button_text">Start Chat</string>
+    <string name="activity_chat_window_send_button">Send</string>
 </resources>
