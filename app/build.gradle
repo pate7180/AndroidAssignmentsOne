@@ -6,6 +6,13 @@ plugins {
 android {
     compileSdk 32
 
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+    lintOptions {
+        abortOnError false
+    }
+
     defaultConfig {
         applicationId "com.example.androidassignmentsone"
         minSdk 24
@@ -18,6 +25,8 @@ android {
         testInstrumentationRunnerArguments clearPackageData: 'true'
         testInstrumentationRunnerArguments useTestStorageService: 'true'
     }
+
+
 
     buildTypes {
         release {
@@ -36,6 +45,9 @@ android {
         execution 'ANDROIDX_TEST_ORCHESTRATOR'
     }
     namespace 'com.example.androidassignmentsone'
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -45,6 +57,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment:2.4.1'
+    implementation 'androidx.navigation:navigation-ui:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
