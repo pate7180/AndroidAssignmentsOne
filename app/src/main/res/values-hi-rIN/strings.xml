@@ -42,4 +42,5 @@
     <string name="test_toolbar_cutom_update_msg_toast">"विकल्प 1 के लिए टोस्ट अधिसूचना संदेश बदल गया है "</string>
     <string name="test_toolbar_about_msg">"संस्करण 1.0, किशन पटेल द्वारा "</string>
     <string name="test_toolbar_about">"के बारे में "</string>
+    <string name="chat_window_empty_msg_error">"संदेश खाली नहीं होना चाहिए "</string>
 </resources>

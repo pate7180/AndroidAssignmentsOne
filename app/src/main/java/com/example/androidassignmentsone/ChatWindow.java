@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,15 +23,19 @@ public class ChatWindow extends AppCompatActivity {
     EditText editTextMessage;
     Button sendButton;
     ArrayList<String> messageList;
+    ChatDatabaseHelper chatDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        chatDb=new ChatDatabaseHelper(ChatWindow.this);
         setContentView(R.layout.activity_chat_window);
         listView = findViewById(R.id.listView);
         editTextMessage = findViewById(R.id.editTextChatMessage);
         sendButton = findViewById(R.id.sendButton);
         messageList = new ArrayList<>();
+        messageList=chatDb.getMessages();
+
 
         ChatAdapter messageAdapter =new ChatAdapter( this );
         listView.setAdapter (messageAdapter);
@@ -38,10 +43,25 @@ public class ChatWindow extends AppCompatActivity {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                messageList.add(String.valueOf(editTextMessage.getText()));
-                messageAdapter.notifyDataSetChanged();
-                editTextMessage.getText().clear();
+//                messageList.add(String.valueOf(editTextMessage.getText()));
+//                messageAdapter.notifyDataSetChanged();
+//                editTextMessage.getText().clear();
+
+                String newMessage=editTextMessage.getText().toString();
+                newMessage=newMessage.trim();
+                if(newMessage.isEmpty()){
+                    Toast.makeText(ChatWindow.this, R.string.chat_window_empty_msg_error, Toast.LENGTH_SHORT).show();
+                    editTextMessage.setText("");
+                }
+                else {
+                    messageList.add(newMessage);
+                    chatDb.addMessage(newMessage);
+                    messageAdapter.notifyDataSetChanged();
+                    editTextMessage.setText("");
+                }
             }
+
+
         });
     }
 
@@ -105,6 +125,7 @@ public class ChatWindow extends AppCompatActivity {
     protected void onDestroy(){
         Log.i(ACTIVITY_NAME, "In onDestroy()");
         super.onDestroy();
+        chatDb.close();
     }
 }
 
