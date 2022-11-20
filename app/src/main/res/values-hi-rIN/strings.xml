@@ -43,4 +43,8 @@
     <string name="test_toolbar_about_msg">"संस्करण 1.0, किशन पटेल द्वारा "</string>
     <string name="test_toolbar_about">"के बारे में "</string>
     <string name="chat_window_empty_msg_error">"संदेश खाली नहीं होना चाहिए "</string>
+    <string name="weather_forecast_button_text">"मौसम पूर्वानुमान "</string>
+    <string name="current_temperature">"वर्तमान तापमान "</string>
+    <string name="min_temperature">"न्यूनतम तापमान "</string>
+    <string name="max_temperature">"अधिकतम तापमान "</string>
 </resources>

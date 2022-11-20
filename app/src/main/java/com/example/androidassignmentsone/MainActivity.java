@@ -8,13 +8,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME = "MainActivity";
-    
+    private Spinner spinner;
+    protected String selectedCityValueFromDropDown = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +56,44 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, TestToolbar.class);
                 startActivity(intent);
             }
+        });
+
+        Button weatherForecastButton = findViewById(R.id.weatherForecastButton);
+        weatherForecastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Log.i(ACTIVITY_NAME, "User clicked Weather Forecast Button");
+                Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
+                intent.putExtra("dropDownCityValue", selectedCityValueFromDropDown);
+                startActivity(intent);
+            }
+        });
+
+        String[] cities = {"kitchener,ca" ,"toronto,ca","vancouver,ca", "waterloo,ca", "calgary,ca", };
+        Spinner spinner = findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter <String>(MainActivity.this,android.R.layout.simple_spinner_dropdown_item,cities);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                selectedCityValueFromDropDown = cities[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {}
+        });
+
+        spinner = findViewById(R.id.spinner);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, cities);
+        spinner.setAdapter(arrayAdapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                selectedCityValueFromDropDown = cities[i];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {}
         });
 
     }
